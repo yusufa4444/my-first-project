@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Kano| The Heart of Hausa land</title>
+<style>
+/* CSS Styles */
+:root {
+--primary: #bc002d; 
+--dark: #2c3e50; 
+--light: #f4f4f4;
+--text: #333;  
+}
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+scroll-behavior:smooth ;
+}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.5;
+color: var(--text);
+background-color: gray;
+}
+/* Navigation */
+nav {
+background: rgba(255, 255, 255, 0.95);
+padding: 1rem 2rem;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000 ;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+display: flex;
+justify-content: space-between;
+align-items: center;
+transition: all 0.3s ease;
+}
+.logo {
+font-size: 1.5rem;
+font-weight: bold;
+color: var(--primary);
+ text-transform: uppercase;
+letter-spacing: 2px;
+}
+nav ul {
+display: flex;
+list-style:none;
+}
+nav ul li {
+margin-left: 20px;
+}
+ nav ul li a {
+text-decoration: none; 
+color: var(--dark);
+font-weight: 500;
+transition: color 0.3s;
+}
+nav ul li a:hover {
+color: var(--primary);
+}
+/* Hero Section */
+header {
+height: 70vh;
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url("images/oldCity.jpeg");
+background-size: cover;
+background-position: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+text-align: center;
+padding: 0 20px;
+}
+header h1 { font-size: 4rem; margin-bottom: 0.5rem; }
+/* General Section Styling */
+section { padding: 5rem 10%; }
+h2 {
+text-align: center;
+margin-bottom: 3rem;
+font-size: 2.5rem;
+position: relative;
+}
+h2::after {
+content: '';
+display: block;
+width: 50px;
+height: 3px;
+background: var(--primary);
+margin: 10px auto;
+}
+/* Grid Layouts */
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+}
+.card {
+background: white;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-10px); }
+.card img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+}
+.card-content { padding: 1.5rem; }
+/* History Section */
+#history { background: var(--light); text-align: center; }
+.history-text { max-width: 800px; margin: 0 auto; font-size: 1.1rem; }
+/* Contact Section Styles */
+#contact { background: #fff; }
+.contact-container {
+max-width: 600px;
+margin: 0 auto;
+background: var(--light);
+padding: 2.5rem;
+border-radius: 12px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.form-group { margin-bottom: 1.5rem; }
+label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+input, textarea {
+width: 100%;
+padding: 0.8rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 1rem;
+font-family: inherit;
+}
+.submit-btn {
+background: var(--primary);
+color: white;
+padding: 1rem 2rem;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 1rem;
+font-weight: bold;
+width: 100%;
+transition: background 0.3s;
+}
+.submit-btn:hover { background: #900022; }
+.hidden-msg {
+display: none;
+text-align: center;
+color: #27ae60;
+font-weight: bold;
+padding: 2rem;
+background: #e8f5e9;
+border-radius: 8px;
+}
+footer {
+background: var(--dark);
+color: white;
+text-align: center;
+padding: 2rem;
+margin-top: 2rem;
+}
+/* Gallery Styling */
+ 
+.gallery-grid {
+display: grid;
+/* This line creates as many 250px columns as will fit on the screen */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 15px;
+padding: 20px 0;
+}
+.gallery-item {
+overflow: hidden;
+border-radius: 8px;
+height: 300px; /* Fixed height for a uniform look */
+}
+.gallery-item img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* This prevents the image from stretching */
+transition: transform 0.5s ease;
+cursor: zoom-in;
+}
+/* Hover Effect: Zoom into the photo */
+.gallery-item:hover img {
+transform: scale(1.1);
+}
+#gallery {
+    scroll-margin-top: 80px;
+    padding: 60px  20px;
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="logo">KanoTravel</div>
+<ul>
+<li><a href="#history">History
+
+</a></li>
+<li><a href="#culture">Culture
+
+</a></li>
+<li><a href="#food">Food
+
+</a></li>
+<li><a href="#gallery">Gallery
+
+</a></li>
+<li><a href="#landmarks">Landmarks
+
+</a></li>
+<li><a href="#contact">Contact
+
+</a></li>
+</ul>
+</nav>
+<header>
+<h1>Discover Kano</h1>
+<p>Experience the beauty of the ancient city of wonders.</p>
+</header>
+<section id="history">
+<h2>A Glimpse into the Past</h2>
+<div class="history-text">
+    <p>Founded in the year 999 AD, here lies a city with a history that spans more than a
+         thouthand years.
+          From the time of Tsunburbura,the goddess of the temple of Dala hill,and the chief
+           priest, Barbushe, who also live on top of Dala hill, Kano has an unbroken
+            chain of leadership structure, and a rich history that is deeply rooted in culture and 
+            tradition which need to be explored by the world.     
+         </p>
+</div>
+</section>
+<section id="culture">
+<h2>Rich Culture</h2>
+<div class="grid">
+<div class="card">
+<img src=
+"images/durbar1.jpeg" alt="durbar1">
+<div class="card-content">
+<h3>Durbar procession</h3>
+<p>Horse riders on a procession during a Durbar festival.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/durbar2.jpeg" alt="durbar2">
+<div class="card-content">
+<h3>Sallah festivities</h3>
+<p>Traditional warriors called 'Yan Lufuda' during a Sallah festival.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="food" style="background: var(--light);">
+<h2>Traditional Delicacies</h2>
+<div class="grid">
+<div class="card">
+<div class="card-content">
+<h3>Wainar Shinkafa</h3>
+<p>A local delicacy made from white rice, and eaten with stew made from pepper and Green leaves.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<h3>Tuwan Shinkafa</h3>
+<p>Another popular dish prepared especially during festivities.It is also made from rice, and taken with different varities of stew.</p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<h3>Gurasa</h3>
+<p>An traditional type of bread, prepared from wheat cereals, or more recently flour.
+    It can be taken with a stew or grounded groundnut cake and a bit of oil. </p>
+</div>
+</div>
+</div>
+</section>
+<section id="gallery">
+<h2>Photo Gallery</h2>
+<div class="gallery-grid">
+<div class="gallery-item"><img src="images/gidanRumfa.jpeg" alt="gidanRumfa"> loading="Lazy"></div>
+<div class="gallery-item"><img src="images/danHausa.jpeg" alt="danHausa"> loading="lazy"></div>
+<div class="gallery-item"><img src="images/kks.jpeg" alt="kks"> loading="lazy"</div>
+<div class="gallery-item"><img src="images/@night.jpeg" alt="night">loading="lazy"</div>
+<div class="gallery-item"><img src="images/mosque.jpeg" alt="mosque">loading="lazy"</div>
+<div class="gallery-item"><img src="images/Dan agundi.webp" alt="dan agundi">loading="lazy"</div>
+<div class="gallery-item"><img src="images/Kano_City_Aerial.jpg" alt="aerial">loading="lazy"</div>
+<div class="gallery-item"><img src="images/Picture.jpg" alt="picture">loading="lazy"</div>
+</div>
+</section>
+<section id="landmarks">
+<h2>Iconic Landmarks</h2>
+<div class="grid">
+<div class="card">
+<img src="images/dala Hill.jpg" alt="dalaHill">
+<div class="card-content">
+<h3>The famous Dala Hill
+</h3>
+<p>Walk through the historic Dala hill where the ancient people of Kano first settled, more than a thousand years ago.</p>
+</div>
+</div>
+<div class="card">
+<img src="images/dyePit.jpeg" alt="Kofar Mata Dye fit">
+<div class="card-content">
+<h3>Kofar Mata Dye fit</h3>
+<p>The landmark Kofar Mata Dye fit established in 1498, and is still functioning after surviving hundreds of years of transformation</p>
+</div>
+</div>
+</div>
+</section>
+<section id="contact">
+<h2>Plan Your Visit</h2>
+<div class="contact-container">
+<form id="tourForm">
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" name="name" placeholder="Enter your name" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" id="email" name="email" placeholder="email@example.com" required>
+</div>
+<div class="form-group">
+<label for="message">What would you like to see?</label>
+<textarea id="message" rows="5" placeholder="Tell us about your dream trip..."></textarea>
+</div>
+<button type="submit" class="submit-btn">Send Inquiry</button>
+</form>
+<div id="formFeedback" class="hidden-msg">
+ Your inquiry has been sent. Our team will contact you shortly.
+</div>
+</div>
+</section>
+<footer>
+<p>&copy; 2026 Kano Tourism Project. All rights reserved.</p>
+</footer>
+<script>
+// Form Submission Logic
+document.getElementById('tourForm').addEventListener('submit', function(e) {
+e.preventDefault(); 
+// Basic animation: Hide form and show success message
+this.style.display = 'none';
+const feedback = document.getElementById('formFeedback');
+feedback.style.display = 'block';
+// Cons  ole log for demonstration
+console.log("Inquiry received from:", document.getElementById('email').value);
+});
+    </script>
+    
+</body>
+</html>
